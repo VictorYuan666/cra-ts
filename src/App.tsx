@@ -40,7 +40,22 @@ const App: React.FC = () => {
                     <Link to={`/hooks/useEffect`}>useEffect</Link>
                   </Menu.Item>
                   <Menu.Item>
+                    <Link to={`/hooks/useCallback`}>useCallback</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to={`/hooks/useMemo`}>useMemo</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to={`/hooks/useContext`}>useContext</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to={`/hooks/useRef`}>useRef</Link>
+                  </Menu.Item>
+                  <Menu.Item>
                     <Link to={`/hooks/customHooks`}>customHooks</Link>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <Link to={`/hooks/useRematch`}>useRematch</Link>
                   </Menu.Item>
                 </SubMenu>
               </Menu>

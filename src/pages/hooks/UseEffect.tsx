@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input } from "antd";
+import { Button } from "antd";
 import axios from "axios";
 import Counter from "./components/Counter";
 
@@ -41,9 +41,11 @@ const UseEffect: React.FC = () => {
 
   return (
     <div>
-      {/* <Counter value={20} onChange={(num: number) => console.log(num)} /> */}
       <h1>{count}</h1>
-      {/* <h1>最近热映电影</h1>
+      
+      <Counter value={20} onChange={(num: number) => console.log(num)} />
+      
+      <h1>最近热映电影</h1>
       <Button loading={loading} onClick={() => setLoading(true)}>
         刷新
       </Button>
@@ -55,7 +57,7 @@ const UseEffect: React.FC = () => {
             return <li>{item.title}</li>;
           })}
         </ul>
-      )} */}
+      )}
     </div>
   );
 };

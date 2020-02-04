@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Button } from "antd";
 
 interface Props {
-  value: number,
-  onChange: (num: number) => any
+  value: number;
+  onChange: (num: number) => any;
 }
 
 export default function Counter({ value, onChange }: Props) {
@@ -12,10 +13,19 @@ export default function Counter({ value, onChange }: Props) {
     value && setCount(value);
   }, [value]);
 
-  return [
-    <div key="a">{count}</div>,
-    <button key="b" onClick={() => onChange(count + 1)}>
-      点击+1
-    </button>
-  ]
+  return (
+    <>
+      <div>{count}</div>,
+      <Button
+        type="primary"
+        onClick={() => {
+          const newCount = count + 1;
+          setCount(newCount);
+          onChange(newCount);
+        }}
+      >
+        点击+1
+      </Button>
+    </>
+  );
 }
